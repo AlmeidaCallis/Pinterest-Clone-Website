@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover creative ideas and inspiration on Pinterest. Save ideas, get inspired, and share with others.">
+    <title>Pinterest - Discover ideas & inspiration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="#" aria-label="Pinterest Home">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="#e60023" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"/>
+                        <text x="12" y="16" font-size="16" font-weight="bold" fill="white" text-anchor="middle">P</text>
+                    </svg>
+                </a>
+                <span class="logo-text">Pinterest</span>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+                <span class="menu-icon"></span>
+            </button>
+
+            <nav class="nav" aria-label="Main navigation">
+                <a href="#" class="nav-link"><i class="fas fa-compass"></i> Explore</a>
+                <a href="#" class="nav-link"><i class="fas fa-plus-circle"></i> Create</a>
+                <a href="#" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-secondary" aria-label="Log in to Pinterest"><i class="fas fa-sign-in-alt"></i> Log in</button>
+                <button class="btn btn-primary" aria-label="Sign up for Pinterest">Sign up free</button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Inspiration showcase">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Find your next
+                    <div class="rotating-ideas" aria-live="polite">
+                        <span class="idea" aria-hidden="true">dinner idea</span>
+                        <span class="idea" aria-hidden="true">home decor idea</span>
+                        <span class="idea" aria-hidden="true">fashion idea</span>
+                        <span class="idea" aria-hidden="true">travel idea</span>
+                        <span class="idea" aria-hidden="true">weekend plan</span>
+                    </div>
+                    <span class="visually-hidden">idea</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Explore over 500 million ideas and save the ones you love
+                </p>
+                <button class="btn btn-primary btn-large"><i class="fas fa-rocket"></i> Explore Pinterest</button>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">500M+</span>
+                        <span class="stat-label">Monthly ideas</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">300M+</span>
+                        <span class="stat-label">Active users</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5B+</span>
+                        <span class="stat-label">Pins saved</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Background masonry grid with real images -->
+            <div class="masonry-grid" aria-hidden="true">
+                <div class="masonry-column">
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Home Design</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 1.2K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Fashion Ideas</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 2.5K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Travel Plans</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 3.1K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="masonry-column">
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Recipes</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 4.7K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1663040332608-9429498d779f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">DIY Projects</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 2.3K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Wellness</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 1.8K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="masonry-column">
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Beauty Tips</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 5.2K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Wedding Ideas</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 3.9K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Garden Design</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 2.1K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="masonry-column">
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://plus.unsplash.com/premium_photo-1664299577783-9358f95824f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Art & Craft</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 4.3K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1498049794561-7780e7231661?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Tech Gadgets</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 3.5K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="pin-card" tabindex="-1">
+                        <div class="pin-image" style="background-image: url('https://images.unsplash.com/photo-1544033527-b192daee1f5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80');">
+                            <div class="pin-overlay">
+                                <div class="pin-title">Fitness</div>
+                                <div class="pin-saves"><i class="fas fa-heart"></i> 6.2K saves</div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Categories -->
+        <section class="categories" aria-label="Popular categories">
+            <div class="container">
+                <h2 class="section-title">Popular Categories</h2>
+                <p class="section-subtitle">Browse ideas by category to find exactly what you're looking for</p>
+                
+                <div class="categories-grid">
+                    <a href="#" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1616046229478-9901c5536a45?ixlib=rb-4.0.&ixid=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Home Decor</h3>
+                            <span class="category-count">2.5M ideas</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Fashion</h3>
+                            <span class="category-count">3.1M ideas</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1723744895523-75a5b52de0eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Food & Drink</h3>
+                            <span class="category-count">4.7M ideas</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Travel</h3>
+                            <span class="category-count">1.9M ideas</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="category-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1681843681830-7d4b70a435c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Art & Design</h3>
+                            <span class="category-count">2.8M ideas</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="category-card" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
+                        <div class="category-overlay">
+                            <h3 class="category-title">Health & Wellness</h3>
+                            <span class="category-count">1.6M ideas</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" aria-label="Pinterest features">
+            <div class="container">
+                <h2 class="section-title">Why Pinterest?</h2>
+                <p class="section-subtitle">Discover how Pinterest helps you find and organize inspiration</p>
+                
+                <div class="features-container">
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <h3 class="feature-title">Save Ideas</h3>
+                        <p class="feature-description">Create boards to organize and collect all your favorite pins in one place. Your personal inspiration library.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="feature-title">Get Inspired</h3>
+                        <p class="feature-description">Discover new ideas from millions of curated pins across all categories. Personalized recommendations just for you.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" aria-hidden="true">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Share Ideas</h3>
+                        <p class="feature-description">Share your collections with friends and collaborate on shared boards. Build inspiration together.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" aria-label="User testimonials">
+            <div class="container">
+                <h2 class="section-title">Loved by creators worldwide</h2>
+                <p class="section-subtitle">See what people are saying about Pinterest</p>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"Pinterest helped me plan my entire wedding! From decor to dresses, everything was organized perfectly."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background-image: url('https://plus.unsplash.com/premium_photo-1689977830819-d00b3a9b7363?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80');"></div>
+                            <div class="author-info">
+                                <h4 class="author-name">Manisha Patel</h4>
+                                <span class="author-role">Event Planner</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"As a designer, Pinterest is my go-to source for inspiration. It's like having a visual notebook of all my ideas."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80');"></div>
+                            <div class="author-info">
+                                <h4 class="author-name">Marcus Chen</h4>
+                                <span class="author-role">Graphic Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">"I've completely renovated my home using ideas from Pinterest. The visual search feature is amazing!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80');"></div>
+                            <div class="author-info">
+                                <h4 class="author-name">Emma Rodriguez</h4>
+                                <span class="author-role">Home Renovator</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" aria-label="Call to action">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to find your inspiration?</h2>
+                    <p class="cta-subtitle">
+                        Join millions of people saving and sharing ideas every day
+                    </p>
+                    <button class="btn btn-primary btn-large"><i class="fas fa-user-plus"></i> Sign up free</button>
+                    <p class="cta-note">It's free to join. No credit card required.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" aria-label="Site footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="#e60023" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <text x="12" y="16" font-size="16" font-weight="bold" fill="white" text-anchor="middle">P</text>
+                        </svg>
+                        <span class="logo-text">Pinterest</span>
+                    </div>
+                    <p class="footer-tagline">Discover and save creative ideas</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links-container">
+                    <div class="footer-links-column">
+                        <h4 class="footer-links-title">Company</h4>
+                        <nav class="footer-links">
+                            <a href="#" class="footer-link">About</a>
+                            <a href="#" class="footer-link">Careers</a>
+                            <a href="#" class="footer-link">Brand</a>
+                            <a href="#" class="footer-link">Press</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4 class="footer-links-title">Support</h4>
+                        <nav class="footer-links">
+                            <a href="#" class="footer-link">Help Center</a>
+                            <a href="#" class="footer-link">Safety Center</a>
+                            <a href="#" class="footer-link">Community Guidelines</a>
+                            <a href="#" class="footer-link">Contact Us</a>
+                        </nav>
+                    </div>
+                    
+                    <div class="footer-links-column">
+                        <h4 class="footer-links-title">Legal</h4>
+                        <nav class="footer-links">
+                            <a href="#" class="footer-link">Privacy Policy</a>
+                            <a href="#" class="footer-link">Terms of Service</a>
+                            <a href="#" class="footer-link">Copyright Policy</a>
+                            <a href="#" class="footer-link">Cookies</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; <span id="current-year">2024</span> Pinterest Clone. All rights reserved.</p>
+                <div class="footer-language">
+                    <i class="fas fa-globe"></i>
+                    <select class="language-select" aria-label="Select language">
+                        <option value="en">English (US)</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
