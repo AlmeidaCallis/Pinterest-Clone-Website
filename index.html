@@ -35,16 +35,32 @@
                 <span class="menu-icon"></span>
             </button>
 
-            <nav class="nav" aria-label="Main navigation">
-                <a href="#" class="nav-link"><i class="fas fa-compass"></i> Explore</a>
+            <nav class="nav" aria-label="Main navigation"><nav class="nav">
+    </nav>
+    <script>
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('.nav');
+
+  menuBtn.addEventListener('click', () => {
+    const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('active');
+  });
+</script>
+
+<div class="hero-cta">
+    <a href="explore.html" class="nav-link"><i class="fas fa-plus-circle"></i> Explore</a>
+</div>
                 <a href="#" class="nav-link"><i class="fas fa-plus-circle"></i> Create</a>
                 <a href="#" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
             </nav>
 
+            
             <div class="header-actions">
-                <button class="btn btn-secondary" aria-label="Log in to Pinterest"><i class="fas fa-sign-in-alt"></i> Log in</button>
-                <button class="btn btn-primary" aria-label="Sign up for Pinterest">Sign up free</button>
-            </div>
+    <a href="login.html" class="btn btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Log in</a>
+    <a href="signup.html" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Sign up for free</a>
+</div>
+
         </div>
     </header>
 
@@ -66,7 +82,11 @@
                 <p class="hero-subtitle">
                     Explore over 500 million ideas and save the ones you love
                 </p>
-                <button class="btn btn-primary btn-large"><i class="fas fa-rocket"></i> Explore Pinterest</button>
+            
+
+<div class="hero-cta">
+    <a href="explore.html" class="btn btn-primary" style="text-decoration: none; padding: 12px 24px;">Explore Pinterest</a>
+</div>
                 
                 <div class="hero-stats">
                     <div class="stat-item">
@@ -339,7 +359,7 @@
                     <p class="cta-subtitle">
                         Join millions of people saving and sharing ideas every day
                     </p>
-                    <button class="btn btn-primary btn-large"><i class="fas fa-user-plus"></i> Sign up free</button>
+    <a href="signup.html" class="btn btn-primary btn-large" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Sign up for free</a>
                     <p class="cta-note">It's free to join. No credit card required.</p>
                 </div>
             </div>
@@ -359,12 +379,12 @@
                         <span class="logo-text">Pinterest</span>
                     </div>
                     <p class="footer-tagline">Discover and save creative ideas</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    <div class="footer-social">
+    <a href="https://www.facebook.com/pinterest" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.instagram.com/pinterest" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/pinterest" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/pinterest" target="_blank" class="social-link"><i class="fab fa-youtube"></i></a>
+</div>
                 </div>
                 
                 <div class="footer-links-container">
@@ -401,7 +421,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p class="footer-copyright">&copy; <span id="current-year">2024</span> Pinterest Clone. All rights reserved.</p>
+                <p class="footer-copyright">&copy; <span id="current-year">2026</span> Pinterest Clone Callis Almeida (10915). All rights reserved.</p>
                 <div class="footer-language">
                     <i class="fas fa-globe"></i>
                     <select class="language-select" aria-label="Select language">
@@ -413,6 +433,8 @@
                 </div>
             </div>
         </div>
+        
     </footer>
+    
 </body>
 </html>
