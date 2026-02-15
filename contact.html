@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Pinterest Clone</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <style>
+        body { background-color: #e9e9e9; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: var(--font-family); }
+        .card { background: white; padding: 40px; border-radius: 32px; width: 450px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        input, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 2px solid #ddd; border-radius: 16px; outline: none; font-family: inherit; transition: border 0.3s; }
+        textarea { min-height: 120px; resize: vertical; }
+        input:focus, textarea:focus { border-color: var(--pinterest-red); }
+        
+        /* Error styling */
+        input.invalid, textarea.invalid { border-color: #e60023; background-color: #fff8f8; }
+        #status-msg { margin-top: 15px; font-size: 14px; font-weight: 600; min-height: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <a href="index.html">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" width="40" alt="logo">
+        </a>
+        <h1 style="font-size: 28px; margin: 15px 0;">Get in touch</h1>
+        
+        <form id="contact-form">
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
+            <textarea name="message" id="message" placeholder="What's on your mind?" required></textarea>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px; padding: 12px; cursor: pointer;">
+                Send Message
+            </button>
+        </form>
+
+        <div id="status-msg"></div>
+        
+        <a href="index.html" style="display: block; margin-top: 20px; color: var(--pinterest-gray); text-decoration: none; font-size: 14px;">
+            Back to Home
+        </a>
+    </div>
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("N8wm1IDcZJJPyJw8T"); 
+        })();
+
+        window.onload = function() {
+            const form = document.getElementById('contact-form');
+            const statusMsg = document.getElementById('status-msg');
+            const btn = form.querySelector('button');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                // --- VALIDATION LOGIC ---
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const message = document.getElementById('message');
+                let errorMessage = "";
+
+                // Reset previous errors
+                [name, email, message].forEach(el => el.classList.remove('invalid'));
+
+                // 1. Name Validation (Min 2 characters)
+                if (name.value.trim().length < 2) {
+                    name.classList.add('invalid');
+                    errorMessage = "Please enter your full name.";
+                }
+
+                // 2. Email Validation (Regex pattern)
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email.value.trim())) {
+                    email.classList.add('invalid');
+                    errorMessage = "Please enter a valid email address.";
+                }
+
+                // 3. Message Validation (Min 10 characters)
+                if (message.value.trim().length < 10) {
+                    message.classList.add('invalid');
+                    errorMessage = "Message must be at least 10 characters long.";
+                }
+
+                // Show error if validation fails
+                if (errorMessage) {
+                    statusMsg.style.color = "red";
+                    statusMsg.innerText = errorMessage;
+                    return; // Stop the function here
+                }
+
+                // --- SENDING LOGIC (Only runs if validation passes) ---
+                btn.innerText = 'Sending...';
+                btn.disabled = true;
+                statusMsg.innerText = "";
+
+                const serviceID = 'service_ayvgebi';
+                const templateID = 'template_dq3vdfi';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(function() {
+                        statusMsg.style.color = "green";
+                        statusMsg.innerText = "Message sent successfully! 🚀";
+                        form.reset();
+                        btn.innerText = 'Send Message';
+                        btn.disabled = false;
+                    }, function(error) {
+                        statusMsg.style.color = "red";
+                        statusMsg.innerText = "Failed to send... Please try again.";
+                        btn.innerText = 'Send Message';
+                        btn.disabled = false;
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
